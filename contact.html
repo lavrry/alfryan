@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مجمع الفريان</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="شعار المجمع" />
+      <h2>مجمع الفريان</h2>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="nav" class="side-nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">نبذة عن الجوامع</a>
+    <a href="locations.html">مواقع الجوامع</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
+  </header>
+
+      
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2025 مُجَمْع اْلفَرَيان</p>
+  </footer>
+
+  <section class="contact-section"><form class="contact-form" action="https://formspree.io/f/mldbqenw" method="POST" id="contactForm">
+  <input type="text" name="name" placeholder="الاسم الكامل" required />
+  <input type="phone" name="phone" placeholder=" رقم الهاتف" required />
+  <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+  <textarea name="message" placeholder="رسالتك" required></textarea>
+  <button type="submit">إرسال</button>
+  <p id="formMessage" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
+    تم إرسال رسالتك بنجاح!
+  </p>
+</form>
+  </section>
+
+
+    <script>
+function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('open');
+    }  
+</script>
+ <script>
+  const form = document.getElementById('contactForm');
+  const message = document.getElementById('formMessage');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // يمنع الإرسال مؤقتًا عشان ننتظر الاستجابة
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        message.style.display = 'block';
+        message.style.color = 'green';
+        message.textContent = 'تم إرسال رسالتك بنجاح!';
+      } else {
+        message.style.display = 'block';
+        message.style.color = 'red';
+        message.textContent = 'حدث خطأ أثناء الإرسال، حاول مرة أخرى.';
+      }
+    }).catch(error => {
+      message.style.display = 'block';
+      message.style.color = 'red';
+      message.textContent = 'حدث خطأ أثناء الإرسال، حاول لاحقًا.';
+    });
+  });
+</script>
+
+</body>
+</html>
