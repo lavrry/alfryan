@@ -87,7 +87,7 @@ header {
   color: white;
   padding: 12px 24px;
   border: none;
-  top: 80px;
+  top: 30px;
   border-radius: 8px;
   font-size: 18px;
   text-decoration: none;
@@ -120,7 +120,7 @@ header {
 }
 
 .ayah-box {
-  margin-top: 120px; /* ← نزّل الآية أكثر */
+  margin-top: 90px; /* ← نزّل الآية أكثر */
   
 }
 
