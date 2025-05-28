@@ -1,0 +1,397 @@
+* {
+  font-family: 'Cairo', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: url('https://maknoon.org.sa/images/logo.png') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+}
+
+header {
+  background-color: #b18f62;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #b18f62;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.menu-toggle {
+  font-size: 32px;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  z-index: 1002;
+}
+
+/* القائمة الجانبية */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #b18f62;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.side-nav.open {
+  left: 0;
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: right;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.side-nav a:hover {
+  background-color: white;
+  color: #b18f62;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-top: -60px;
+}
+.cta-btn {
+  background-color: #b18f62;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  top: 80px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  left: -660px;
+
+  /* التأثير */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تأثير الإبداع عند اللمس */
+.cta-btn:hover {
+  background-color: #9f7f52; /* لون أغمق */
+  transform: scale(1.05) translateY(-3px); /* تكبير + رفعة خفيفة */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* ظل أعمق */
+}
+
+.ayah-box, .stats-box {
+  background-color: rgba(255, 255, 255, 0.195);
+  border: 2px solid #b18f62;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ayah-box {
+  margin-top: 120px; /* ← نزّل الآية أكثر */
+  
+}
+
+.stats-box {
+  margin-top: 10px; /* ← نزّل الإحصائيات أكثر */
+
+}
+
+.ayah {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat {
+  flex: 1 1 30%;
+  margin: 10px 0;
+}
+
+body {
+    background-image: url('background.jpg'); /* غيّر الاسم إذا لازم */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* هذا يجعل الخلفية ثابتة */
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+/* طبقة تعتيم فوق الصورة */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202020e1; /* التعتيم بنسبة 50% */
+    z-index: -1;
+}
+
+footer {
+    background-color: #b18f62; /* بني فاتح */
+    background-color:  b18f62;
+    text-align: center;
+    padding: 10px;
+    margin-top: 200px;
+    color: white;
+}
+
+footer {
+    background-color: #b18f62; /* بني فاتح */
+    background-color: b18f62;
+    text-align: center;
+    padding: 2px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.locations-page {
+  padding: 50px 20px;
+  background-color: #f8f6f300;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-top: -30px;
+  color: #6e4c2f;
+}
+
+.mosque-location {
+  margin-bottom: 50px;
+  border: 2px solid #b18f62;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mosque-location h2 {
+  color: #6e4c2f;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.mosque-location iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+.about-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.masjid-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.masjid-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid #b18f62;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.masjid-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.masjid-card h2 {
+  color: #b18f62;
+  margin-bottom: 10px;
+}
+
+.masjid-card p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.masjid-img {
+  width: 100%;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.contact-section {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #b18f62;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #b18f62;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a0784f;
+}
+
+
+.registration-section {
+  padding: 20px 15px;
+  background-color: #f8f5f2;
+  max-width: 420px;  /* << قللنا العرض الثابت */
+  width: 90%;        /* << عشان يتجاوب مع الجوال */
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  font-family: 'Cairo', sans-serif;
+}
+
+.form-title {
+  color: #6e4c2f;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.registration-form label {
+  display: block;
+  margin: 12px 0 4px;
+  color: #444;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+  border-color: #6e4c2f;
+  outline: none;
+}
+
+.registration-form button {
+  background-color: #6e4c2f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form button:hover {
+  background-color: #5b3f27;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: #6e4c2f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #5b3f27;
+}
+
+.masjid-card {
+  margin-top: 60px;
+}
